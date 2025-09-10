@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>الباركود الثاني</title>
+  <script>
+    window.onload = function() {
+      if(localStorage.getItem("qr1_opened") === "true"){
+        document.getElementById("content").style.display = "block";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="error" style="display:none; color:red;">
+    🚫 يجب فتح الباركود الأول أولاً!
+  </div>
+  
+  <div id="content" style="display:none;">
+    <h1>الباركود الثاني</h1>
+    <p> 🎉</p>
+    
+    <!-- هنا تكتبين البيانات اللي تبغين تظهر عند فتح الباركود الثاني -->
+    <p>الجرعات الدوائيه</p>
+    <p>رقم الغرفه 10: 5</p>
+  </div>
+</body>
+</html>
